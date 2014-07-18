@@ -1,5 +1,6 @@
 var expect = require("chai").expect,
-  Person = require("../../src/people/person.js");
+  Person = require("../../src/people/person.js"),
+  Tenant = require("../../src/people/tenant.js");
 
 describe("Person", function(){
   describe("initialization", function(){
@@ -16,14 +17,4 @@ describe("Person", function(){
 
 
 
-
-
-
-
-
-
-
-
-
-  
 });
