@@ -4,5 +4,4 @@ function Person(name, contact){
 };
 
 
-
 module.exports = Person;

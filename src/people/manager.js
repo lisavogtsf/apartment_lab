@@ -1,4 +1,5 @@
-var person = require("./person");
+var Person = require("./person");
+var inherits = require("../inherits.js"); 
 
 function Manager(name, contact) {
   this.name = name;
@@ -6,9 +7,11 @@ function Manager(name, contact) {
   
   this.properties = [];
 }
+// 
+inherits(Person, Manager);
 
 Manager.prototype.addProperty = function(property) {
-  // add property from properties
+  this.properties.push(property);
 };
 
 Manager.prototype.removeProperty = function(property) {

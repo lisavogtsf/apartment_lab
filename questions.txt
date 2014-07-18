@@ -1,0 +1,4 @@
+Questions:
+
+How do I check that I correctly re-assigned the Child prototype name after it inherits from Parent? 
+Problems: reads as only a function if at all.

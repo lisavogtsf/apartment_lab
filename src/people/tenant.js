@@ -1,4 +1,5 @@
-var person = require("./person.js");
+var Person = require("./person.js");
+var inherits = require("../inherits.js"); 
 
 function Tenant(name, contact) {
   this.name = name;
@@ -6,9 +7,11 @@ function Tenant(name, contact) {
   this.references = [];
 };
 
+inherits(Person, Tenant);
+
+
 Tenant.prototype.addReference = function(reference){
-  // add reference to references
-  
+  this.references.push(reference);
 };
 
 module.exports = Tenant;
