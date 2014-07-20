@@ -1,13 +1,12 @@
 var expect = require("chai").expect,
-  app = require("../../src/main.js"),
   Property = require("../../src/property_types/property.js"),
   Tenant = require("../../src/people/tenant.js"),
   Manager = require("../../src/people/manager.js");
 
 
 var testProperty = new Property("testAddress");
-var roper = new app.Manager("roper", "333-3333");
-var jenny = new app.Tenant("jenny", "867-5309");
+var roper = new Manager("roper", "333-3333");
+var jenny = new Tenant("jenny", "867-5309");
 
 describe("Property", function(){
   describe('property constructor', function(){
@@ -24,10 +23,10 @@ describe("Property", function(){
       testProperty.manager = roper;
       expect(testProperty.manager.name).to.eql('roper');
     })
-    // it('should make someone manager of a property', function(){
-    //   testProperty.setManager(roper);
-    //   expect(testProperty.manager.name).to.equal('roper');
-    // });
+    it('should make someone manager of a property', function(){
+      testProperty.setManager(roper);
+      expect(testProperty.manager.name).to.eql('roper');
+    });
 //     it('should not allow a non-Manager to manage', function(){
 //       var error = testProperty.setManager(jenny);
 //       expect(error).to.equal(-1);
