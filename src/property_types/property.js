@@ -11,6 +11,8 @@ function Property(address) {
 Property.prototype.setManager = function(person) {
   // only add if there is no manager, and 
   // person is a manager
+
+  // code below breaking tests?
   if (this.manager.length < 1 && person instanceof app.Manager){
     this.manager = person;    
   } else {

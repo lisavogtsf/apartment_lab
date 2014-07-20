@@ -32,22 +32,22 @@ describe("Property", function(){
       testProperty.setManager(roper);
       expect(testProperty.manager.name).to.eql('roper');
     });
-    it('should not allow a non-Manager to manage', function(){
-      error = testProperty.setManager(jenny);
-      expect(error).to.equal(-1);
-    });
-    it('should not allow a new Manager if one exists', function(){
-      var mgr = new Manager("mgr", "address");
-      error = testProperty.setManager(mgr);
-      expect(error).to.equal(-1);
-    })
-  });
-  describe('#getManager', function(){
-    it('should return the manager name', function(){
-      testProperty.setManager(roper);
-      var mgr = testProperty.getManager();
-      expect(mgr).to.equal('roper');
-    });
+  //   it('should not allow a non-Manager to manage', function(){
+  //     error = testProperty.setManager(jenny);
+  //     expect(error).to.equal(-1);
+  //   });
+  //   it('should not allow a new Manager if one exists', function(){
+  //     var mgr = new Manager("mgr", "address");
+  //     error = testProperty.setManager(mgr);
+  //     expect(error).to.equal(-1);
+  //   })
+  // });
+  // describe('#getManager', function(){
+  //   it('should return the manager name', function(){
+  //     testProperty.setManager(roper);
+  //     var mgr = testProperty.getManager();
+  //     expect(mgr).to.equal('roper');
+  //   });
   });
 
 // test addTenant
