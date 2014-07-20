@@ -1,11 +1,14 @@
 var expect = require("chai").expect,
+  app = require("../../src/main.js"),
   Property = require("../../src/property_types/property.js"),
   Tenant = require("../../src/people/tenant.js"),
   Manager = require("../../src/people/manager.js");
 
+
+
 var paramount = new Property("2865 Jackson St");
-var roper = new Manager("roper", "333-3333");
-var jenny = new Tenant("jenny", "867-5309");
+var roper = new app.Manager("roper", "333-3333");
+var jenny = new app.Tenant("jenny", "867-5309");
 
 describe("Property", function(){
   describe('property constructor', function(){
@@ -19,8 +22,8 @@ describe("Property", function(){
   });
   describe('#setManager', function(){
     it('should make someone manager of a property', function(){
-      paramount.setManager(roper);
-      expect(paramount.manager).to.equal(roper);
+      property.setManager(roper);
+      expect(property.manager).to.equal(roper);
     });
     it('should not allow a non-Manager to manage', function(){
       var error = paramount.setManager(jenny);
@@ -30,7 +33,7 @@ describe("Property", function(){
 // test getManager
   describe('#getManager', function(){
     it('should return the manager name', function(){
-      expect(paramount.getManager).to.equal(roper);
+      expect(paramount.getManager.name).to.equal(roper);
     });
   });
 

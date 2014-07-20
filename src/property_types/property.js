@@ -12,7 +12,6 @@ Property.prototype.setManager = function(person) {
     console.log("You must be a Manager to manage a property!");
     return -1;
   }
-
 };
 
 Property.prototype.getManager = function(){
@@ -38,4 +37,14 @@ Property.prototype.rentedUnits = function(){
 }
 
 
-module.exports = Property;
+module.exports = {
+  Property: Property
+  
+  // Property.prototype: Property.prototype
+  // Property.setManager: Property.setManager,
+  // Property.prototype.getManager: Property.prototype.getManager,
+  // Property.prototype.addTenant: Property.prototype.addTenant,
+  // Property.prototype.removeTenant: Property.prototype.removeTenant,
+  // Property.prototype.availableUnits: Property.prototype.availableUnits,
+  // Property.prototype.rentedUnits: Property.prototype.rentedUnits
+}
