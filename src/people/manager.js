@@ -15,7 +15,11 @@ Manager.prototype.addProperty = function(property) {
 };
 
 Manager.prototype.removeProperty = function(property) {
-  // remove properties
+  var oldProperty = this.properties.indexOf(property);
+  // return value is for checking
+  var removed = this.properties.splice(oldProperty, 1);
+  return removed;
+
 };
 
 module.exports = Manager;

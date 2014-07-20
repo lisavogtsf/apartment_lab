@@ -9,8 +9,8 @@ function Tenant(name, contact) {
 
 inherits(Person, Tenant);
 
-
 Tenant.prototype.addReference = function(reference){
+  // reference should be a Person
   this.references.push(reference);
 };
 

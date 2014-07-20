@@ -10,19 +10,19 @@ In this application we have three main types of things we are dealing with.
 * `Unit`
 
 
-#### Person
+#### ☑️ Person
 
 With `Person` we have two main subtypes:
 
-* `Manager`
-* `Tenant`
+* ☑️`Manager`
+* ☑️`Tenant`
 
-Both `Manager` and `Tenant` should *inherit* methods from `Person`, and implement any extra behavior they need to play their role in the App.
+☑️Both `Manager` and `Tenant` should *inherit* methods from `Person`, and implement any extra behavior they need to play their role in the App.
 
 ##### Relationships
 
-* `Manager` has many `properties`
-* `Tenant` has a many `references` that are just `Person` instances with contact info. 
+* ☑️`Manager` has many `properties`
+* ☑️`Tenant` has a many `references` that are just `Person` instances with contact info. 
 
 #### Property
 

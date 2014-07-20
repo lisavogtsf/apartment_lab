@@ -3,23 +3,20 @@ var expect = require("chai").expect,
   Tenant = require("../../src/people/tenant.js"),
   Manager = require("../../src/people/manager.js");
 
-console.log("running Manager test");
+var jenny = new Manager("jenny", "867-5309");
 var roper = new Manager("roper", "333-3333");
 
 describe("Manager", function(){
   describe("initialization", function(){
     it("should have a certain name", function(){
-      var jenny = new Manager("jenny", "867-5309");
       expect(jenny.name).to.equal("jenny");
     });
     it("should have a phone number", function(){
-      var jenny = new Manager("jenny", "867-5309");
       expect(jenny.contact).to.equal("867-5309")  
     });
-    // it("should have the proper constructor", function(){
-    //   var jenny = new Manager("jenny", "867-5309");
-    //   expect(jenny.constructor).to.equal("Manager");      
-    // });
+    it("should be an instanceof Manager", function(){
+      expect(roper instanceof Manager).to.eql(true);
+    });
   });
   describe("#addProperty", function(){
     it("should add to the list", function(){
@@ -28,7 +25,13 @@ describe("Manager", function(){
       expect(roper.properties[3]).to.equal("florida");
     });
   });
-
+  describe("#removeProperty", function(){
+    it("should remove property from the list", function(){
+      roper.properties = ["miami", "dade", "key west"];
+      var removed = roper.removeProperty("dade");
+      expect(roper.properties).to.eql(["miami", "key west"]);
+    });
+  });
 
   
 
