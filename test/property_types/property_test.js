@@ -9,6 +9,11 @@ var roper = new Manager("roper", "333-3333");
 var jenny = new Tenant("jenny", "867-5309");
 
 describe("Property", function(){
+
+  beforeEach("reset error", function(){
+    var error = 0;
+  });
+  
   describe('property constructor', function(){
     it('should exist', function(){
       // how to add units? not a parameter
@@ -27,17 +32,23 @@ describe("Property", function(){
       testProperty.setManager(roper);
       expect(testProperty.manager.name).to.eql('roper');
     });
-//     it('should not allow a non-Manager to manage', function(){
-//       var error = testProperty.setManager(jenny);
-//       expect(error).to.equal(-1);
-//     });
+    it('should not allow a non-Manager to manage', function(){
+      error = testProperty.setManager(jenny);
+      expect(error).to.equal(-1);
+    });
+    it('should not allow a new Manager if one exists', function(){
+      var mgr = new Manager("mgr", "address");
+      error = testProperty.setManager(mgr);
+      expect(error).to.equal(-1);
+    })
   });
-// // test getManager
-//   describe('#getManager', function(){
-//     it('should return the manager name', function(){
-//       expect(testProperty.getManager.name).to.equal(roper);
-//     });
-//   });
+  describe('#getManager', function(){
+    it('should return the manager name', function(){
+      testProperty.setManager(roper);
+      var mgr = testProperty.getManager();
+      expect(mgr).to.equal('roper');
+    });
+  });
 
 // test addTenant
 

@@ -2,9 +2,12 @@ var Property = require("./property");
 var inherits = require("../inherits.js"); 
 
 function Duplex(address) {
-  // A duplex only has 2 units;
+  this.address = address;
+  this.maxUnits = 2;
 }
 
 inherits(Property, Duplex);
+
+// duplex methods?
 
 module.exports = Duplex;
