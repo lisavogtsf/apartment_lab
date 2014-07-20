@@ -5,13 +5,9 @@ function Property(address) {
 }
 
 Property.prototype.setManager = function(person) {
-  // set this.manager to person
-  if (person instanceof Manager){
-    this.manager = person;    
-  } else {
-    console.log("You must be a Manager to manage a property!");
-    return -1;
-  }
+  //need to constrain?
+  this.manager = person;    
+
 };
 
 Property.prototype.getManager = function(){
@@ -37,14 +33,15 @@ Property.prototype.rentedUnits = function(){
 }
 
 
-module.exports = {
-  Property: Property
+module.exports = Property;
+// {
+//   Property: Property
   
-  // Property.prototype: Property.prototype
-  // Property.setManager: Property.setManager,
-  // Property.prototype.getManager: Property.prototype.getManager,
-  // Property.prototype.addTenant: Property.prototype.addTenant,
-  // Property.prototype.removeTenant: Property.prototype.removeTenant,
-  // Property.prototype.availableUnits: Property.prototype.availableUnits,
-  // Property.prototype.rentedUnits: Property.prototype.rentedUnits
-}
+//   // Property.prototype: Property.prototype
+//   // Property.setManager: Property.setManager,
+//   // Property.prototype.getManager: Property.prototype.getManager,
+//   // Property.prototype.addTenant: Property.prototype.addTenant,
+//   // Property.prototype.removeTenant: Property.prototype.removeTenant,
+//   // Property.prototype.availableUnits: Property.prototype.availableUnits,
+//   // Property.prototype.rentedUnits: Property.prototype.rentedUnits
+// }
