@@ -6,6 +6,14 @@ Solution: use instanceof
 Lots of these errors in npm test:
  TypeError: Object #<Property> has no method 'setManager'
 
+
+// Property
+// on manual testing, Property constructor and
+// manager methods work fine. In mocha I can't get the methods to associate
+// with the constructor. Keeps saying "Object #<Property> has no method 'setManager'"
+// 
+
+
 This error a lot: 
 (Got similar when I tried npm test from wrong directory, but this should be correct)
   Lisas-MacBook-Air:apartment_lab lisavogtsf$ npm test
