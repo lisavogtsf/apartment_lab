@@ -1,4 +1,5 @@
-var app = require('../main.js');
+var app = require('../main.js'),
+  Manager = require('../people/manager.js');
 
 function Property(address) {
   this.address = address,
