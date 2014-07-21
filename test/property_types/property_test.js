@@ -16,7 +16,6 @@ describe("Property", function(){
   
   describe('property constructor', function(){
     it('should exist', function(){
-      // how to add units? not a parameter
       expect(testProperty).to.exist;
     });
     it('should be an instanceof Property', function(){

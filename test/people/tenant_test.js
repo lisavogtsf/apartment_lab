@@ -25,17 +25,10 @@ describe("Tenant", function(){
       expect(jenny.references).to.exist;
     });
     it("should add new references", function(){
-      jenny.references = ["ginger", "scary"]
+      jenny.references = ["ginger", "scary"];
       jenny.addReference("posh");
       expect(jenny.references[2]).to.eql("posh");
     });
   });
-
-  // // any way to check constructor?
-  //   it("should have the correct constructor", function(){
-  //     var jenny = new Tenant("jenny", "867-5309");
-  //     expect(Tenant.prototype).to.equal("Tenant");
-  //   })
-
 
 });

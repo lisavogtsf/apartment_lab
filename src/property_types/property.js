@@ -1,12 +1,11 @@
-var app = require('../main.js');
-
+var app = require('../main.js')
 function Property(address) {
-  this.address = address;
-  this.manager = [];
-  this.tenants = [];
-  this.units = [];
-  this.numUnits = 1;
-}
+  this.address = address,
+  this.manager = [],
+  this.tenants = [],
+  this.units = [],
+  this.maxUnits = 1
+};
 
 Property.prototype.setManager = function(person) {
   // only add if there is no manager, and 
@@ -31,7 +30,7 @@ Property.prototype.getManager = function(){
 Property.prototype.addTenant = function(unit, tenant) {
   // add tenant but check to make sure there
   // is a manager first and a tenant has 2 references
-  // if(this.tenants.length < this.numUnits){
+  // if(this.tenants.length < this.maxUnits){
 
     // unsure how to do this
   

@@ -1,8 +1,8 @@
 var Person = require('./people/person.js'),
-  Manager = require('./people/manager'),
-  Tenant = require('./people/tenant');
+  Manager = require('./people/manager.js'),
+  Tenant = require('./people/tenant.js');
 
-var Property = require('./property_types/property'),
+var Property = require('./property_types/property.js'),
   Duplex = require('./property_types/duplex.js'),
   ApartmentBuilding = require('./property_types/apartment_building.js'), 
   TownHouse = require('./property_types/town_house.js');

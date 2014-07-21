@@ -12,7 +12,7 @@ describe("Manager", function(){
       expect(jenny.name).to.equal("jenny");
     });
     it("should have a phone number", function(){
-      expect(jenny.contact).to.equal("867-5309")  
+      expect(jenny.contact).to.equal("867-5309");  
     });
     it("should be an instanceof Manager", function(){
       expect(roper instanceof Manager).to.eql(true);
