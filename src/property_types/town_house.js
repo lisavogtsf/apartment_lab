@@ -5,6 +5,7 @@ function TownHouse(address){
   // only has one unit per address
   this.address = address;
   this.units = [];
+  this.manager = [];
   this.maxUnits = 1;
 };
 

@@ -5,9 +5,9 @@ var app = require("../main.js"),
 function Property(address) {
   this.address = address;
   this.manager = [];
+  this.units = [];
   // maybe don't need tenants array
   // this.tenants = [];
-  this.units = [];
   this.maxUnits = 1;
 };
 

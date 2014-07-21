@@ -2,9 +2,9 @@ var Person = require("./person");
 var inherits = require("../inherits.js"); 
 
 function Manager(name, contact) {
-  this.name = name;
-  this.contact = contact;
-  
+  // this.name = name;
+  // this.contact = contact;
+  Person.call(this, name, contact);
   this.properties = [];
 }
  
