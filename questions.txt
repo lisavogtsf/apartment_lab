@@ -1,5 +1,7 @@
 Questions:
 
+This assignment was very challenging.  I felt like I spent a lot of time trying to fix module.export/require errors and other testing problems.  I also feel like I don't really understand prototypes and inheritance, as the kept not working the way I expected them to (but maybe the problem was with node?).
+
 How do I check that I correctly re-assigned the Child prototype name after it inherits from Parent? 
 Solution: use instanceof
 
