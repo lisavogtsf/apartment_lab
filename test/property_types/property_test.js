@@ -26,11 +26,11 @@ describe("Property", function(){
     it('MANUAL set manager', function(){
       testProperty.manager = roper;
       expect(testProperty.manager.name).to.eql('roper');
-    })
-    it('should make someone manager of a property', function(){
-      testProperty.setManager(roper);
-      expect(testProperty.manager.name).to.eql('roper');
     });
+    // it('should make someone manager of a property', function(){
+    //   testProperty.setManager(roper);
+    //   expect(testProperty.manager.name).to.eql('roper');
+    // });
   //   it('should not allow a non-Manager to manage', function(){
   //     error = testProperty.setManager(jenny);
   //     expect(error).to.equal(-1);

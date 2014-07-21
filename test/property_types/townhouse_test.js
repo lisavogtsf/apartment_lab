@@ -1,20 +1,22 @@
 // test townhouse
 var expect = require("chai").expect,
-  app = require("../../src/main.js");
+  TownHouse = require("../../src/property_types/town_house.js")
+  Property = require("../../src/property_types/property.js"),
+  Tenant = require("../../src/people/tenant.js"),
+  Manager = require("../../src/people/manager.js");
+  // var app = require("../../src/main.js");
+
+  var roper = new Manager("roper", "222-5555");
+  var jenny = new Tenant("jenny", "867-5309");
+  var brownstone = new TownHouse("882 Place");
 
 describe('TownHouse', function(){
 
-  beforeEach('reset', function(){
-    var mgr = new app.Manager("roper", "222-5555");
-    var ten = new app.Tenant("jenny", "867-5309");
-  });
-
   describe('initialization', function(){
     it('should be an instance of TownHouse', function(){
-      var townhouseTest = new app.TownHouse("882 Place");
-      expect(townhouseTest instanceof app.TownHouse).to.eql(true);
+      expect(brownstone instanceof TownHouse).to.eql(true);
     });
-
-
   });
+
+
 });

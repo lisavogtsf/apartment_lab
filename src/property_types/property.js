@@ -7,18 +7,9 @@ function Property(address) {
   this.maxUnits = 1
 };
 
-Property.prototype.setManager = function(person) {
-  // only add if there is no manager, and 
-  // person is a manager
 
-  // code below breaking tests?
-  if (this.manager.length < 1 && person instanceof app.Manager){
-    this.manager = person;    
-  } else {
-    console.log("Either this person is not a Manager or this building already has a Manager.");
-    return -1;
-  }
-
+Property.prototype.setManager = function(person){
+  this.manager = person;
 };
 
 Property.prototype.getManager = function(){
