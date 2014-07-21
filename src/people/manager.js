@@ -7,7 +7,7 @@ function Manager(name, contact) {
   
   this.properties = []
 }
-// 
+ 
 inherits(Person, Manager);
 
 Manager.prototype.addProperty = function(property) {

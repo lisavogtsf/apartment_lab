@@ -9,7 +9,6 @@ function Property(address) {
   this.maxUnits = 1
 };
 
-
 Property.prototype.setManager = function(person){
   this.manager = person;
 };
