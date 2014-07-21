@@ -6,23 +6,38 @@ Solution: use instanceof
 Lots of these errors in npm test:
  TypeError: Object #<Property> has no method 'setManager'
 
+This error a lot: 
+(Got similar when I tried npm test from wrong directory, but this should be correct)
+  Lisas-MacBook-Air:apartment_lab lisavogtsf$ npm test
+   
+  > apartment_lab@0.0.1 test /Users/lisavogtsf/repos/apartment_lab
+  > mocha --recursive --reporter spec
+
+  \
+  module.js:340
+      throw err;
+            ^
+  Error: Cannot find module './src/main.js'
 
 
- Longform error:
-npm ERR! Error: ENOENT, open '/Users/lisavogtsf/repos/apartment_lab/test/property_types/package.json'
-npm ERR! If you need help, you may report this *entire* log,
-npm ERR! including the npm and node versions, at:
-npm ERR!     <http://github.com/npm/npm/issues>
 
-npm ERR! System Darwin 13.3.0
-npm ERR! command "node" "/usr/local/bin/npm" "test"
-npm ERR! cwd /Users/lisavogtsf/repos/apartment_lab/test/property_types
-npm ERR! node -v v0.10.29
-npm ERR! npm -v 1.4.14
-npm ERR! path /Users/lisavogtsf/repos/apartment_lab/test/property_types/package.json
-npm ERR! code ENOENT
-npm ERR! errno 34
-npm ERR! 
-npm ERR! Additional logging details can be found in:
-npm ERR!     /Users/lisavogtsf/repos/apartment_lab/test/property_types/npm-debug.log
-npm ERR! not ok code 0
+
+
+Longform error:
+  npm ERR! Error: ENOENT, open '/Users/lisavogtsf/repos/apartment_lab/test/property_types/package.json'
+  npm ERR! If you need help, you may report this *entire* log,
+  npm ERR! including the npm and node versions, at:
+  npm ERR!     <http://github.com/npm/npm/issues>
+
+  npm ERR! System Darwin 13.3.0
+  npm ERR! command "node" "/usr/local/bin/npm" "test"
+  npm ERR! cwd /Users/lisavogtsf/repos/apartment_lab/test/property_types
+  npm ERR! node -v v0.10.29
+  npm ERR! npm -v 1.4.14
+  npm ERR! path /Users/lisavogtsf/repos/apartment_lab/test/property_types/package.json
+  npm ERR! code ENOENT
+  npm ERR! errno 34
+  npm ERR! 
+  npm ERR! Additional logging details can be found in:
+  npm ERR!     /Users/lisavogtsf/repos/apartment_lab/test/property_types/npm-debug.log
+  npm ERR! not ok code 0
